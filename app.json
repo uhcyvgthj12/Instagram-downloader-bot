@@ -1,0 +1,32 @@
+{
+  "name": "Instagram Downloader Bot",
+  "description": "Download Instagram posts, reels, and stories via Telegram",
+  "repository": "https://github.com/uhcyvgthj12/instagram-downloader-bot",
+  "logo": "https://www.vectorlogo.zone/logos/instagram/instagram-icon.svg",
+  "keywords": ["telegram", "bot", "instagram", "downloader"],
+  "env": {
+    "TELEGRAM_TOKEN": {
+      "description": "Your Telegram Bot Token from @BotFather",
+      "required": true
+    },
+    "INSTAGRAM_USERNAME": {
+      "description": "Your Instagram username (optional)",
+      "required": false
+    },
+    "INSTAGRAM_PASSWORD": {
+      "description": "Your Instagram password (optional)",
+      "required": false
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
